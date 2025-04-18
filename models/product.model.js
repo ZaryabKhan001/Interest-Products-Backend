@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import { bidSchema } from "./bid.model.js";
 
 const productSchema = new mongoose.Schema(
   {
@@ -31,6 +32,7 @@ const productSchema = new mongoose.Schema(
       type: Number,
       default: 0,
     },
+    bids: [bidSchema],
   },
   {
     timestamps: true,
